@@ -26,8 +26,13 @@ fetchAdvice = () => {
 
   render() {
     const { advice } = this.state;
-    return <h1>{advice}</h1>;
+    return 
+    <div className="App">
+      <div className="card"></div>
+        <div className="header">{advice}</div>
+    </div>
   }
 }
 
 export default App;
+ 
