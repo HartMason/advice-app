@@ -15,16 +15,18 @@ componentDidMount() {                      //method is a function that belongs t
 
 fetchAdvice = () => {
   axios.get('http://api.adviceslip.com/advice')
-  .then(() => {
-    console.log("response")
+  .then((response) => {
+    const { advice } = response.data.slip;
+    this.setState({ advice })
   })
-  .catch(() => {
-    console.log("error")
+  .catch((error) => {
+    console.log(error)
   })
 }  
 
   render() {
-    return <h1>APP</h1>;
+    const { advice } = this.state;
+    return <h1>{advice}</h1>;
   }
 }
 
