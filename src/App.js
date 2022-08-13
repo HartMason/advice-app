@@ -9,10 +9,10 @@ class App extends React.Component {
     advice: "",
   };
 
-  componentDidMount() {
-    //method is a function that belongs to a class
-    this.fetchAdvice();
-  }
+  // componentDidMount() {
+  //   //method is a function that belongs to a class
+  //   this.fetchAdvice();
+  // }
 
   fetchAdvice = () => {
     axios
